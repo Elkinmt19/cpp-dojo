@@ -70,7 +70,7 @@ int main()
      */
     cout << fmax(34,78) << endl;
 
-     /**
+    /**
      * The fmin() function allows to find the min of two numbers
      * params:
      *  - first number
