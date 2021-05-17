@@ -20,7 +20,7 @@ int main()
 
     cout << "Enter your name please" << endl;
 
-     /**
+    /**
      * The getline() functions allows to get a hole line of text (incluring spaces)
      * params:
      *  - cin keyword
