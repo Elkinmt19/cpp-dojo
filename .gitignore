@@ -1,6 +1,9 @@
 # -------- CUSTOM EXAMPLES --------
 examples
 
+# -------- VSCODE IGNORES ------
+.vscode
+
 # ---------- C++ IGNORES -----------
 *.exe
 compilers-files
