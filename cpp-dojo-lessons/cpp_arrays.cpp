@@ -16,5 +16,18 @@ int main()
 
     int unknowarray[10]; // Creating an unknown array
 
+    // Working with 2-d arrays
+    // For this types of arrays, the dimensions must be specified 
+    int numberGrid[5][3] = 
+    {
+        {1,2},
+        {3,4},
+        {4,5},
+        {6,7},
+        {8,9}
+    };
+
+    cout << numberGrid[0][0];
+
     return 0;
 }
