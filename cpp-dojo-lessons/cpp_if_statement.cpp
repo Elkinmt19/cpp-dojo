@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     /**
-     * This is a function to start working with if statements in c++
+     * This is a script to start working with if statements in c++
      */
 
     // Function to get the max of two numbers given by the user
