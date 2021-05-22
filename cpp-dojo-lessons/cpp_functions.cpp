@@ -17,6 +17,7 @@ int main()
     cout << "Button" << endl;
 
     double answer = cube(5.0);
+    cout << answer;
 
     return 0;
 }
@@ -25,7 +26,7 @@ int main()
 void sayHi(string name, int age)
 {
     cout << "Hello User" << endl;
-    cout << "Hello " << name << "you are " << age;
+    cout << "Hello " << name << " you are " << age << endl;
 }
 
 // Function to calculate the cubic of a number
