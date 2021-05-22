@@ -9,7 +9,7 @@ int main()
      */
     int index = 1;
 
-    // Basic structure of whilw loops, it checks the condition before executing the code
+    // Basic structure of while loops, it checks the condition before executing the code
     while(index <= 5)
     {
         cout << index << endl;
@@ -18,7 +18,7 @@ int main()
 
     cout << "....................." << endl;
 
-    // do-while loop structure, it execute the code before checking the condition
+    // do-while loop structure, it executes the code before checking the condition
     do
     {
         cout << index << endl;
