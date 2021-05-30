@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "hello.hpp"
+#include <say-hello/hello.hpp>
 
 int main()
 {
