@@ -1,4 +1,4 @@
-# :ramen: :fish_cake: THE C++ DOJO :ramen: :fish_cake: 
+# :ramen: :fish_cake: THE C++ DOJO :fish_cake: :ramen: 
 This is a repository to learn about C++ and develop different skills for embedded systems programming.<br>
 
 I will be working on different projects like:
