@@ -5,8 +5,11 @@ project(Midterm_cpp_code
         LANGUAGES CXX)  
 
 
-file(GLOB_RECURSE SOURCE_FILES src/*.cpp)
-add_executable(Midterm_oop_cpp main.cpp ${SOURCE_FILES})
+add_executable(
+        Midterm_oop_cpp main.cpp
+        src/Person.cpp
+        src/Vehicle.cpp
+)
 
 target_compile_features(Midterm_oop_cpp PRIVATE cxx_std_20)
 
