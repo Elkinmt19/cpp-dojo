@@ -4,20 +4,30 @@
 // Own includes
 #include "Person.hpp"
 #include "Vehicle.hpp"
+#include "VehicleWash.hpp"
+
 
 int main()
 {
-    Person person1("Elkin", 21);
-    std::cout << "He is " << person1.get_name() << std::endl;
+    // Let's created two persons
+    Person person_1("Mario Bros", 65),person_2("Luigi Bros", 59);
 
-    // Let's create a vehicle for Elkin
-    Vehicle car1("MEL4JE19", "Dark Blue", person1);
-    car1.toString();
+    // Let's create a car 
+    Car car_1("MAR001", "Red", person_1, 2);
 
-    // Let's create a Motorcycle for Elkin
-    Motorcycle moto1("M0R4L19","Dark Blue",person1,"4 Times");
-    moto1.toString();
-    std::cout << "My motorcycle's type is " << moto1.get_type() << std::endl;
+    // Let's create a motorcycle
+    Motorcycle moto_1("LUI001", "Green", person_2, "Twice");
+
+    // Let's create a Vehicle Wash
+    VehicleWash vehiclewash_1("Reino Champinon");
+
+    // Let's add the car and the motorcycle just created
+    vehiclewash_1.addVehicle(car_1);
+    vehiclewash_1.addVehicle(moto_1);
+
+    // Let's show the information of the Vehicle Wash
+    vehiclewash_1.toString();
+    float a = vehiclewash_1.CalculateGain();
 
     return 0;
 }
