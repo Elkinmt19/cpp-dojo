@@ -14,5 +14,10 @@ int main()
     Vehicle car1("MEL4JE19", "Dark Blue", person1);
     car1.toString();
 
+    // Let's create a Motorcycle for Elkin
+    Motorcycle moto1("M0R4L19","Dark Blue",person1,"4 Times");
+    moto1.toString();
+    std::cout << "My motorcycle's type is " << moto1.get_type() << std::endl;
+
     return 0;
 }

@@ -9,6 +9,7 @@ add_executable(
         Midterm_oop_cpp main.cpp
         src/Person.cpp
         src/Vehicle.cpp
+        src/VehicleWash.cpp
 )
 
 target_compile_features(Midterm_oop_cpp PRIVATE cxx_std_20)
