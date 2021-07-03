@@ -1,7 +1,6 @@
 // Built-int includes
 #include <iostream>
 #include <list>
-#include <typeinfo>
 
 // Own includes
 #include "VehicleWash.hpp"
