@@ -19,19 +19,9 @@ void Vehicle::toString()
     std::cout << "Color :" << m_color << std::endl;
 }
 
-void Vehicle::set_plate(std::string n_plate)
+int Vehicle::get_owner_age()
 {
-    m_plate = n_plate;
-}
-
-void Vehicle::set_color(std::string n_color)
-{
-    m_color = n_color;
-}
-
-void Vehicle::set_owner(Person& n_owner)
-{
-    m_owner = n_owner;
+    return m_owner.get_age();
 }
 
 // Motorcycle methods definition

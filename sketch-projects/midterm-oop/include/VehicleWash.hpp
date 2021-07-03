@@ -12,7 +12,7 @@ class VehicleWash
 {
 private:
     std::string m_name;
-    std::list<Vehicle> m_listOfVehicles;
+    std::list<Vehicle*> m_listOfVehicles;
 
 public:
     VehicleWash(std::string name);

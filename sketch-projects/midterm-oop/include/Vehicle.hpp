@@ -19,9 +19,13 @@ public:
 
     void toString();
 
-    void set_plate(std::string n_plate);
-    void set_color(std::string n_color);
-    void set_owner(Person& n_owner);
+    virtual std::string get_vehicle_type(){return "vehicle";}
+
+    virtual std::string get_type(){return "";}
+
+    virtual int get_numberOfGates(){return 0;}
+
+    int get_owner_age();
 };
 
 class Motorcycle : public Vehicle
@@ -38,6 +42,8 @@ public:
     ): Vehicle(plate, color, owner), m_type(type){}
 
     std::string get_type();
+
+    std::string get_vehicle_type() override {return "motorcycle";}
 };
 
 class Car : public Vehicle
@@ -54,6 +60,9 @@ public:
     ): Vehicle(plate, color, owner), m_numberOfGates(numberOfGates){}
 
     int get_numberOfGates();
+
+    std::string get_vehicle_type() override {return "car";}
+
 };
 
 #endif

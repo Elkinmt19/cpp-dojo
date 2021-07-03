@@ -27,7 +27,7 @@ int main()
 
     // Let's show the information of the Vehicle Wash
     vehiclewash_1.toString();
-    float a = vehiclewash_1.CalculateGain();
+    std::cout << "The gain of the Vehicle Wash is :" << vehiclewash_1.CalculateGain() << std::endl;
 
     return 0;
 }
