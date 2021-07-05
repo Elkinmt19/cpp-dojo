@@ -1,0 +1,42 @@
+{ 
+    {
+        "id" : 01,
+        "number" : 1037671586,
+        "owner's name" : "Elkin Javier Guerra Galeano"
+    },
+    {
+        "id" : 02,
+        "number" : 1250758986,
+        "owner's name" : "Leticia Andrea Guerra Galeano"
+    },
+    {
+        "id" : 03,
+        "number" : 4562789523,
+        "owner's name" : "Eva Raquel Galeano Andrade"
+    },
+    {
+        "id" : 04,
+        "number" : 1234741852,
+        "owner's name" : "Jesus Narciso Guerra Pinto"
+    },
+    {
+        "id" : 05,
+        "number" : 7894569852,
+        "owner's name" : "Cotorra"
+    },
+    {
+        "id" : 06,
+        "number" : 7892658421,
+        "owner's name" : "Tony"
+    },
+    {
+        "id" : 07,
+        "number" : 1523654789,
+        "owner's name" : "Mancha"
+    },
+    {
+        "id" : 08,
+        "number" : 7589456456,
+        "owner's name" : "Covid-19"
+    }
+}
