@@ -1,42 +1,8 @@
-{ 
-    {
-        "id" : 01,
-        "number" : 1037671586,
-        "owner's name" : "Elkin Javier Guerra Galeano"
-    },
-    {
-        "id" : 02,
-        "number" : 1250758986,
-        "owner's name" : "Leticia Andrea Guerra Galeano"
-    },
-    {
-        "id" : 03,
-        "number" : 4562789523,
-        "owner's name" : "Eva Raquel Galeano Andrade"
-    },
-    {
-        "id" : 04,
-        "number" : 1234741852,
-        "owner's name" : "Jesus Narciso Guerra Pinto"
-    },
-    {
-        "id" : 05,
-        "number" : 7894569852,
-        "owner's name" : "Cotorra"
-    },
-    {
-        "id" : 06,
-        "number" : 7892658421,
-        "owner's name" : "Tony"
-    },
-    {
-        "id" : 07,
-        "number" : 1523654789,
-        "owner's name" : "Mancha"
-    },
-    {
-        "id" : 08,
-        "number" : 7589456456,
-        "owner's name" : "Covid-19"
-    }
-}
+01,1037671586,Elkin Javier Guerra Galeano
+02,1050758986,Leticia Andrea Guerra Galeano
+03,1062789523,Eva Raquel Galeano Andrade
+04,1034741852,Jesus Narciso Guerra Pinto
+05,1094569852,Cotorra
+06,1092658421,Tony
+07,1023654789,Mancha
+08,1089456456,Covid-19

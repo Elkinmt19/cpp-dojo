@@ -10,13 +10,15 @@ private:
     int m_id;
     int m_account_id;
     std::string m_type;
-    int m_amount;
+    float m_amount;
 
 public:
-    Transaction(int id, int account_id, std::string type, int amount) : 
+    Transaction(int id, int account_id, std::string type, float amount) : 
         m_id{id}, m_account_id{account_id}, m_type{type}, m_amount{amount}{}
     
     void showInfo();
+
+    float get_amount();
 };
 
 

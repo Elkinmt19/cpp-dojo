@@ -2,29 +2,83 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <list>
 
-int main () {
-    
-    std::fstream myfile;
-    myfile.open ("./../text-files/example.txt");
+// Own includes
+#include "Accounts.hpp"
+#include "Transaction.hpp"
 
-    if (myfile.is_open())
+void create_accounts(std::list <Account>& accounts)
+{
+    std::fstream accounts_file;
+    accounts_file.open ("./../text-files/accounts.txt");
+    if (accounts_file.is_open())
     {
-        for (std::string line; std::getline(myfile, line); )
+        for (std::string line; std::getline(accounts_file, line); )
         {
             std::istringstream subfile;
             subfile.str(line);
             std::string data[3];
-
             int i = 0;
             for (std::string line2; std::getline(subfile, line2,',');)
             {
                 *(data + i) = line2; i++;
             }
-            std::cout << *(data) << ' ' << *(data+1) << ' ' << *(data+2) << std::endl;
+            int mid_id = std::stoi(*data);
+            int mid_number = std::stoi(*(data+1));
+            Account account_mid(mid_id, mid_number, *(data+2));
+            accounts.push_back(account_mid);
         }
     }
-    myfile.close();
+    accounts_file.close();
+
+}
+
+void perform_transactions(std::list <Account>& accounts, std::list <Account>::iterator iter)
+{
+    std::fstream transactions_file;
+    transactions_file.open ("./../text-files/transactions.txt");
+    if (transactions_file.is_open())
+    {
+        for (std::string line; std::getline(transactions_file, line); )
+        {
+            std::istringstream subfile;
+            subfile.str(line);
+            std::string data[4];
+            int i = 0;
+            for (std::string line2; std::getline(subfile, line2,',');)
+            {
+                *(data + i) = line2; i++;
+            }
+            int mid_id = std::stoi(*data);
+            int mid_id_account = std::stoi(*(data+1));
+            int mid_amount = std::stoi(*(data+3));
+
+            Transaction transaction_mid(mid_id, mid_id_account, *(data+2), mid_amount);
+            for (iter = accounts.begin(); iter != accounts.end(); iter++)
+            {
+                if (mid_id_account == iter->get_id())
+                {   
+                    iter->add_transaction(&transaction_mid);
+                    iter->calculate_amount();
+                }
+            }
+        }
+    }
+    transactions_file.close();
+
+}
+
+int main () {
+    std::list <Account> accounts;
+    std::list <Account>::iterator iter;
+    create_accounts(accounts);
+    perform_transactions(accounts, iter);
+
+    for (Account i : accounts)
+    {
+        i.showInfo();
+    }
 
     return 0;
 }

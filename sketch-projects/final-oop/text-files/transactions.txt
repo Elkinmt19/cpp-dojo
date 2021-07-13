@@ -1,38 +1,6 @@
-{
-    {
-        "id" : 91,
-        "account's id" : 01,
-        "type" : "input",
-        "amount" : 48923484
-    },
-    {
-        "id" : 92,
-        "account's id" : 03,
-        "type" : "output",
-        "amount" : 45422
-    },
-    {
-        "id" : 93,
-        "account's id" : 07,
-        "type" : "output",
-        "amount" : 4892
-    },
-    {
-        "id" : 94,
-        "account's id" : 05,
-        "type" : "input",
-        "amount" : 1002578
-    },
-    {
-        "id" : 95,
-        "account's id" : 05,
-        "type" : "input",
-        "amount" : 78945233
-    },
-    {
-        "id" : 96,
-        "account's id" : 02,
-        "type" : "output",
-        "amount" : 5456548
-    }
-}
+21,01,input,48923484
+22,03,output,45422
+23,07,output,4892
+24,05,input,1002578
+25,05,input,78945233
+26,02,output,5456548

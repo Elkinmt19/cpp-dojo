@@ -7,6 +7,8 @@ project(Final_cpp_code
 
 add_executable(
         Final_oop_cpp main.cpp
+        src/Accounts.cpp
+        src/Transaction.cpp
 )
 
 target_compile_features(Final_oop_cpp PRIVATE cxx_std_20)

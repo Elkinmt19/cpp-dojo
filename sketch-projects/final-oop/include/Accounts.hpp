@@ -2,7 +2,11 @@
 #define ACCOUNTS_H
 
 // Built-int includes
-#include <iostream> 
+#include <iostream>
+#include <list>
+
+// Own includes
+#include "Transaction.hpp"
 
 class Account
 {
@@ -11,6 +15,7 @@ private:
     int m_number;
     std::string m_owner_name;
     int m_amount;
+    std::list <Transaction*> listOfTransactions;
 
 public:
     Account(int id, int number, std::string owner_name) : 
@@ -18,7 +23,11 @@ public:
     
     void showInfo();
 
-    void showAmont();
+    int get_id();
+
+    void add_transaction(Transaction* trans);
+
+    void calculate_amount();
 };
 
 
