@@ -8,7 +8,7 @@ void Transaction::showInfo()
 {   
     std::cout << "Trasaction Info:" << std::endl;
     std::cout << "id: " << m_id << std::endl;
-    //std::cout << "Type: " << m_type << std::endl;
+    std::cout << "Type: " << m_type << std::endl;
     std::cout << "Amount: " << m_amount << std::endl;
 }
 

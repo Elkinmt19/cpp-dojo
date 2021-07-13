@@ -54,12 +54,12 @@ void perform_transactions(std::list <Account>& accounts, std::list <Account>::it
             int mid_id_account = std::stoi(*(data+1));
             int mid_amount = std::stoi(*(data+3));
 
-            Transaction transaction_mid(mid_id, mid_id_account, *(data+2), mid_amount);
+            Transaction* transaction_mid = new Transaction(mid_id, mid_id_account, *(data+2), mid_amount);
             for (iter = accounts.begin(); iter != accounts.end(); iter++)
             {
                 if (mid_id_account == iter->get_id())
                 {   
-                    iter->add_transaction(&transaction_mid);
+                    iter->add_transaction(transaction_mid);
                     iter->calculate_amount();
                 }
             }
