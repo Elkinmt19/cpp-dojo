@@ -16,3 +16,8 @@ float Transaction::get_amount()
 {
     return m_amount;
 }
+
+std::string Transaction::get_type()
+{
+    return m_type;
+}

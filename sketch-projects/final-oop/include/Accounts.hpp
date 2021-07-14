@@ -28,6 +28,8 @@ public:
     void add_transaction(Transaction* trans);
 
     void calculate_amount();
+
+    float get_amount();
 };
 
 

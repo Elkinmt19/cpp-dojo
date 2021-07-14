@@ -19,6 +19,8 @@ public:
     void showInfo();
 
     float get_amount();
+
+    std::string get_type();
 };
 
 

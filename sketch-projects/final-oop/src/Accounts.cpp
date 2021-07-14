@@ -13,7 +13,7 @@ void Account::showInfo()
     std::cout << "" << m_owner_name << std::endl;
     std::cout << "Amount: " << m_amount << std::endl;
     std::cout << "*********** Account's transactions ***********" << std::endl;
-    
+
     for (Transaction* t : listOfTransactions)
     {
         t->showInfo();
@@ -35,7 +35,18 @@ void Account::calculate_amount()
     float amount_buff = 0;
     for (Transaction* t : listOfTransactions)
     {
-        amount_buff += t->get_amount();
+        if (t->get_type() == "input")
+        {
+            amount_buff += t->get_amount();
+        }
+        if (t->get_type() == "output")
+        {
+            amount_buff -= t->get_amount();
+        }
     }
     m_amount = amount_buff;
+}
+
+float Account::get_amount(){
+    return m_amount;
 }

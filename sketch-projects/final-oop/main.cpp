@@ -34,7 +34,11 @@ void create_accounts(std::list <Account>& accounts)
 
 }
 
-void perform_transactions(std::list <Account>& accounts, std::list <Account>::iterator iter)
+void perform_transactions(
+    std::list <Account>& accounts,
+    std::list <Account>::iterator iter,
+    Transaction*& transaction_mid
+)
 {
     std::fstream transactions_file;
     transactions_file.open ("./../text-files/transactions.txt");
@@ -69,16 +73,35 @@ void perform_transactions(std::list <Account>& accounts, std::list <Account>::it
 
 }
 
+void sort_listOfAccounts(std::list <Account>& accounts)
+{
+    // Sorting List using Lambda Function as comparator
+    accounts.sort([](Account & Account1, Account & Account2)
+    {
+        return Account1.get_amount() < Account2.get_amount();
+    });
+}
+
 int main () {
     std::list <Account> accounts;
     std::list <Account>::iterator iter;
     create_accounts(accounts);
-    perform_transactions(accounts, iter);
+
+    Transaction* transaction_mid;
+    perform_transactions(accounts, iter, transaction_mid);
 
     for (Account i : accounts)
     {
         i.showInfo();
     }
 
+    sort_listOfAccounts(accounts);
+
+    for (Account i : accounts)
+    {
+        i.showInfo();
+    }
+
+    delete(transaction_mid);
     return 0;
 }
