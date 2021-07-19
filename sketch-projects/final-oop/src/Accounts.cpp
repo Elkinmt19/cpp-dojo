@@ -50,3 +50,11 @@ void Account::calculate_amount()
 float Account::get_amount(){
     return m_amount;
 }
+
+void Account::delete_transactions()
+{
+    if (m_amount >= 0)
+    {
+        listOfTransactions.clear();
+    }
+}

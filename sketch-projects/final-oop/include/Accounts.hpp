@@ -30,6 +30,8 @@ public:
     void calculate_amount();
 
     float get_amount();
+
+    void delete_transactions();
 };
 
 

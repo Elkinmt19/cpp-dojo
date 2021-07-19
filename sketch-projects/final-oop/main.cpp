@@ -78,8 +78,22 @@ void sort_listOfAccounts(std::list <Account>& accounts)
     // Sorting List using Lambda Function as comparator
     accounts.sort([](Account & Account1, Account & Account2)
     {
-        return Account1.get_amount() < Account2.get_amount();
+        return Account1.get_amount() > Account2.get_amount();
     });
+}
+
+void show_negative_accounts(std::list <Account>& accounts)
+{
+    int n_accounts = 0;
+    for (Account i : accounts)
+    {
+        if (i.get_amount() < 0)
+        {
+            n_accounts++;
+        }
+    }
+    float percentage = (n_accounts*100)/accounts.size();
+    printf("The percentage of negative accounts right now is:  %4.1f %% \n", percentage);
 }
 
 int main () {
@@ -99,6 +113,14 @@ int main () {
 
     for (Account i : accounts)
     {
+        i.showInfo();
+    }
+
+    show_negative_accounts(accounts);
+
+    for (Account i : accounts)
+    {
+        i.delete_transactions();
         i.showInfo();
     }
 
