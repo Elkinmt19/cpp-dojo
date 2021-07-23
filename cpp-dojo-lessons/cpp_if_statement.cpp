@@ -40,6 +40,8 @@ int main()
 
     cout << "The max of 5 and 7 is " << getMax(5,7) << endl;
 
+    cout << "The max of 7 and 9 is " << getMax_Ternary_operator(7,9) << endl;
+
     return 0;
 }
 
@@ -57,4 +59,14 @@ int getMax(int num1, int num2)
             result = num2;
         }
         return result;
+}
+
+// Another option for this structures of code could be to use the 'Ternary Operator'
+int getMax_Ternary_operator(int num1, int num2)
+{
+    int result;
+
+    result = num1 > num2 ? num1: num2;
+
+    return result;
 }
